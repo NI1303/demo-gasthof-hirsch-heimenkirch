@@ -1,0 +1,488 @@
+{
+ "version": 1,
+ "site": "gasthof-hirsch-heimenkirch",
+ "title": "Gasthof Hirsch",
+ "assistantName": "Demo-Assistent",
+ "launcherLabel": "Fragen?",
+ "avatar": "img/favicon.svg",
+ "placeholder": "z. B. Habt ihr heute Abend offen?",
+ "demoNote": "Demo-Assistent · antwortet nur mit belegten Angaben · sendet nichts",
+ "theme": {
+  "accent": "#8a2a1b",
+  "accent-d": "#6e2014",
+  "ink": "#1e1813",
+  "paper": "#f4ead6",
+  "gold": "#ffc861",
+  "font": "'Alegreya Sans', system-ui, sans-serif",
+  "serif": "'Alegreya', Georgia, serif"
+ },
+ "greeting": "Grüß Gott im Gasthof Hirsch! Ich helfe bei Öffnungszeiten, Anfahrt und Kontakt. Für Tische und Fragen zur Karte am besten anrufen: 08381 7601.",
+ "chips": [
+  {
+   "label": "Öffnungszeiten"
+  },
+  {
+   "label": "Speisekarte"
+  },
+  {
+   "label": "Tisch reservieren"
+  },
+  {
+   "label": "Wo finde ich euch?"
+  }
+ ],
+ "stopwords": [
+  "haben",
+  "habt",
+  "gibt",
+  "gibts",
+  "ihre",
+  "euch",
+  "eure",
+  "eine",
+  "einen",
+  "auch",
+  "kann",
+  "koennen",
+  "welche",
+  "bitte",
+  "danke",
+  "hallo",
+  "noch",
+  "sind",
+  "seid",
+  "mich",
+  "uns",
+  "ihnen",
+  "moechte",
+  "gerne",
+  "fuer",
+  "mein",
+  "meine",
+  "ich",
+  "wir",
+  "ihr",
+  "es"
+ ],
+ "intents": [
+  {
+   "id": "greet",
+   "weight": 1,
+   "keywords": [
+    "hallo",
+    "servus",
+    "gruess gott",
+    "guten tag",
+    "moin",
+    "hi"
+   ],
+   "answer": "Grüß Gott! Wie kann ich helfen?",
+   "links": [
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Tisch reservieren"
+    },
+    {
+     "label": "Wo finde ich euch?"
+    }
+   ]
+  },
+  {
+   "id": "thanks",
+   "weight": 1,
+   "keywords": [
+    "danke",
+    "vielen dank",
+    "super",
+    "perfekt"
+   ],
+   "answer": "Gern geschehen – an Guadn!",
+   "links": [
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Tisch reservieren"
+    },
+    {
+     "label": "Wo finde ich euch?"
+    }
+   ]
+  },
+  {
+   "id": "hours",
+   "weight": 3,
+   "keywords": [
+    "oeffnungszeiten",
+    "geoeffnet",
+    "offen",
+    "auf",
+    "heute",
+    "morgen",
+    "wann",
+    "abends",
+    "abend",
+    "mittags",
+    "mittag",
+    "sonntag",
+    "samstag",
+    "freitag",
+    "mittwoch",
+    "donnerstag",
+    "uhrzeit",
+    "zeiten"
+   ],
+   "answer": "**Öffnungszeiten**\nMo + Di: Ruhetag\nMi: 09:30–14:00 und 17:30–22:00\nDo: 09:30–14:00\nFr + Sa: 09:30–14:00 und 17:30–24:00\nSo: 09:30–14:00",
+   "links": [
+    {
+     "label": "Öffnungszeiten",
+     "href": "#zeiten"
+    },
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Tisch reservieren"
+    },
+    {
+     "label": "Wo finde ich euch?"
+    }
+   ]
+  },
+  {
+   "id": "ruhetag",
+   "weight": 4,
+   "keywords": [
+    "ruhetag",
+    "ruhetage",
+    "montag",
+    "dienstag",
+    "geschlossen"
+   ],
+   "answer": "**Montag und Dienstag ist Ruhetag** (laut bisheriger Website und Gemeinde Heimenkirch). Ab Mittwoch 09:30 Uhr ist wieder geöffnet.",
+   "links": [
+    {
+     "label": "Öffnungszeiten",
+     "href": "#zeiten"
+    }
+   ]
+  },
+  {
+   "id": "essen",
+   "weight": 3,
+   "keywords": [
+    "essen",
+    "speisekarte",
+    "karte",
+    "gerichte",
+    "kueche",
+    "speisen",
+    "tagesgericht",
+    "tagesgerichte",
+    "mittagstisch",
+    "gut buergerlich",
+    "zu essen",
+    "essen gehen"
+   ],
+   "answer": "Es gibt **gut bürgerliches Essen** – so steht es auf der bisherigen Website. In Gästebewertungen werden besonders **Hirschgulasch mit selbstgemachten Spätzle, Schnitzel und Currywurst** gelobt. Die aktuelle Karte erfahren Sie telefonisch: 08381 7601.",
+   "links": [
+    {
+     "label": "Zur Kreidetafel",
+     "href": "#tafel"
+    },
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ]
+  },
+  {
+   "id": "gulasch",
+   "weight": 4,
+   "keywords": [
+    "hirschgulasch",
+    "gulasch",
+    "spaetzle",
+    "wild",
+    "schnitzel",
+    "currywurst"
+   ],
+   "answer": "Gäste schreiben: „das beste Hirschgulasch seit langem … mit herrlichen, selbstgemachten Spätzle“. Schnitzel und Currywurst werden ebenfalls oft gelobt. Ob ein Gericht heute auf der Karte steht, bitte kurz erfragen: **08381 7601**.",
+   "links": [
+    {
+     "label": "Zur Kreidetafel",
+     "href": "#tafel"
+    },
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ]
+  },
+  {
+   "id": "preise",
+   "weight": 10,
+   "keywords": [
+    "preis",
+    "preise",
+    "kostet",
+    "kosten",
+    "euro",
+    "teuer",
+    "guenstig"
+   ],
+   "answer": "Preise liegen mir nicht vor. In Bewertungen werden die Preise als fair beschrieben – genaue Preise bitte telefonisch erfragen: **08381 7601**.",
+   "links": [
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ]
+  },
+  {
+   "id": "veggie",
+   "weight": 4,
+   "keywords": [
+    "vegetarisch",
+    "vegan",
+    "fleischlos",
+    "allergie",
+    "allergene",
+    "glutenfrei",
+    "laktose"
+   ],
+   "answer": "Dazu habe ich keine gesicherten Angaben – bitte direkt in der Küche nachfragen: **08381 7601**.",
+   "links": [
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ]
+  },
+  {
+   "id": "reserv",
+   "weight": 4,
+   "keywords": [
+    "reservieren",
+    "reservierung",
+    "tisch",
+    "tisch reservieren",
+    "platz",
+    "gruppe",
+    "feier",
+    "personen",
+    "buchen"
+   ],
+   "answer": "Tische bitte **telefonisch** anfragen: **08381 7601** – zu den Öffnungszeiten. Online reservieren ist in dieser Demo nicht möglich.",
+   "links": [
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    },
+    {
+     "label": "Öffnungszeiten",
+     "href": "#zeiten"
+    }
+   ]
+  },
+  {
+   "id": "hund",
+   "weight": 4,
+   "keywords": [
+    "hund",
+    "hunde",
+    "haustier",
+    "tier"
+   ],
+   "answer": "Laut einem Branchenverzeichnis sind Hunde erlaubt – bitte zur Sicherheit kurz nachfragen: **08381 7601**.",
+   "links": [
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ]
+  },
+  {
+   "id": "zimmer",
+   "weight": 4,
+   "keywords": [
+    "zimmer",
+    "uebernachten",
+    "uebernachtung",
+    "pension",
+    "schlafen",
+    "bett",
+    "fremdenzimmer",
+    "unterkunft"
+   ],
+   "answer": "Auf der Visitenkarte ist ein Bett-Symbol zu sehen, ein Verzeichnis führt den Hirsch auch als Pension. Ob derzeit Zimmer vermietet werden, ist **nicht bestätigt** – bitte anrufen: 08381 7601.",
+   "links": [
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ]
+  },
+  {
+   "id": "zahlung",
+   "weight": 4,
+   "keywords": [
+    "karte zahlen",
+    "kartenzahlung",
+    "ec",
+    "bar",
+    "zahlen",
+    "bezahlen",
+    "paypal",
+    "kreditkarte"
+   ],
+   "answer": "Zu Zahlungsarten liegen mir keine Angaben vor – bitte kurz nachfragen.",
+   "links": [
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ]
+  },
+  {
+   "id": "address",
+   "weight": 3,
+   "keywords": [
+    "adresse",
+    "anfahrt",
+    "wo seid",
+    "wo sind",
+    "wo ist",
+    "wo liegt",
+    "wie komme",
+    "route",
+    "navi",
+    "finden",
+    "wo finde",
+    "finde ich",
+    "standort",
+    "anschrift",
+    "heimenkirch",
+    "lindauer"
+   ],
+   "answer": "**Gasthof Hirsch** · Familie Gaul\nLindauer Straße 1\n88178 Heimenkirch",
+   "links": [
+    {
+     "label": "Route (OpenStreetMap)",
+     "href": "https://www.openstreetmap.org/?mlat=47.62939&mlon=9.9028#map=17/47.62939/9.9028"
+    },
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Tisch reservieren"
+    },
+    {
+     "label": "Wo finde ich euch?"
+    }
+   ]
+  },
+  {
+   "id": "parken",
+   "weight": 3,
+   "keywords": [
+    "parken",
+    "parkplatz",
+    "parkplaetze",
+    "auto",
+    "bus"
+   ],
+   "answer": "Zum Parken liegen mir keine Angaben vor – bitte kurz nachfragen: **08381 7601**.",
+   "links": [
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ]
+  },
+  {
+   "id": "contact",
+   "weight": 2,
+   "keywords": [
+    "telefon",
+    "anrufen",
+    "nummer",
+    "erreichen",
+    "erreiche",
+    "kontakt",
+    "email",
+    "e mail",
+    "mail"
+   ],
+   "answer": "**Kontakt**\nTel.: 08381 7601\nE-Mail: info@gasthaushirsch-heimenkirch.de",
+   "links": [
+    {
+     "label": "08381 7601 anrufen",
+     "href": "tel:+4983817601"
+    }
+   ]
+  }
+ ],
+ "menu": {
+  "foundPrefix": "",
+  "links": [],
+  "followChips": [],
+  "sections": []
+ },
+ "fallback": {
+  "text": "Das kann ich leider nicht sicher beantworten – ich kenne nur belegte Angaben. Am besten kurz anrufen: **08381 7601**.",
+  "links": [
+   {
+    "label": "08381 7601 anrufen",
+    "href": "tel:+4983817601"
+   },
+   {
+    "label": "Öffnungszeiten",
+    "href": "#zeiten"
+   }
+  ]
+ },
+ "handoff": {
+  "tel": "+4983817601",
+  "telLabel": "08381 7601",
+  "text": "Lieber persönlich?"
+ }
+}

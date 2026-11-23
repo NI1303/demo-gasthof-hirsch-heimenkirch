@@ -1,0 +1,11 @@
+/* Gasthof Hirsch – liebevolle Details. Wird von liebe_inject.py nicht überschrieben. */
+:root{--lv-hand:'Chalk','Comic Sans MS',cursive;--lv-ink:#8a2a1b;--lv-ul:#8a2a1b;--lv-tex-o:.2;--lv-note-fs:1.45rem;--lv-ul-w:230px;--lv-egg-fs:1.25rem}
+.zeiten,.footer,.hero{--lv-ink:#ffc861;--lv-ul:#ffc861}
+.board,.csts{position:relative}
+.footer .foot-top{position:relative}
+.lv-egg-hirsch .lv-deer{transform-origin:60px 60px;transition:transform .7s cubic-bezier(.3,1.5,.5,1)}
+.lv-egg-hirsch.lv-egg-on .lv-deer{transform:translate(18px,-16px) rotate(-14deg)}
+.lv-egg-hirsch .lv-egg-msg{position:absolute;left:100%;top:50%;translate:0 -50%;width:18rem;margin-left:.8rem;color:#f1e7d4}
+@media (max-width:899px){.lv-egg-hirsch .lv-egg-msg{left:auto;right:0;top:100%;translate:0 .5rem;width:min(15rem,calc(100vw - 3rem));text-align:right;background:#3d2a1d;padding:.5rem .7rem;border-radius:3px}}
+.lv-404{--lv-404-bg:#1f3227;--lv-404-ink:#f4ead6;--lv-404-accent:#e4ab92;--lv-404-font:'Alegreya Sans',system-ui,sans-serif;--lv-404-display:'Grenze',Georgia,serif;--lv-404-r:3px;--lv-404-hw:400}
+.lv-404-art{color:#ffc861}
